@@ -1,7 +1,8 @@
 # WeatherFM
 
 Un petit projet Python pour ingérer, enrichir et analyser des données météo et métadonnées musicales.
-Ce projet WeatherFM permet :
+
+- Ce projet WeatherFM permet :
 
   - de requêter 3 API : OPENWEATHER, LASTFM et SOUNDCHART
   - de gérer les ingestions via batch avec sauvegarde des fichiers RAW
