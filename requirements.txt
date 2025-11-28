@@ -1,0 +1,27 @@
+# requirements.txt 
+unidecode==1.3.6
+# Core essentials
+requests==2.31.0
+python-dotenv==1.0.0
+pandas==2.0.3
+numpy==1.24.3
+
+# Data analysis (light versions)
+scikit-learn==1.3.0
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# Database (compatible versions)
+sqlalchemy==1.4.46  # ← CHANGÉ pour compatibilité
+dataset==1.6.0
+
+# API & Web (optionnel pour MVP)
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Utils
+python-dateutil==2.8.2
+tqdm==4.66.1
+
+# NOTE: Supprimé les dépendances lourdes pour le MVP
+# scipy, plotly, alembic, streamlit, jupyter, prometheus-client, structlog

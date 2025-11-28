@@ -1,0 +1,40 @@
+spotify-weather-analyzer/
+│
+├── 🐳 docker-compose.yml
+├── 🐋 Dockerfile
+├── 📋 requirements.txt
+├── 🔧 .env.example
+├── 📊 .gitignore
+│
+├── 📁 src/
+│   ├── 🎯 main.py
+│   ├── 🔌 lastfm_weather_collector.py
+│   ├── 📊 data_analyzer.py
+│   ├── 🗄️ database.py
+│   ├── 📈 visualizer.py
+│   └── 📁 utils/
+│       ├── __init__.py
+│       ├── logger.py
+│       └── helpers.py
+│
+├── 📁 data/
+│   ├── 📀 lastfm_weather.db
+│   └── 📄 backup/
+│
+├── 📁 notebooks/
+│   ├── 📓 data_analysis.ipynb
+│   └── 📓 machine_learning.ipynb
+│
+├── 📁 dashboards/
+│   ├── 📊 grafana/
+│   │   └── 📄 dashboard.json
+│   └── 📈 streamlit/
+│       └── 🎨 app.py
+│
+├── 📁 monitoring/
+│   ├── 🔍 prometheus.yml
+│   └── 📊 alert_rules.yml
+│
+└── 📁 logs/
+    ├── 📄 collector.log
+    └── 📄 app.log

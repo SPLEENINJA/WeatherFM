@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  music-weather-collector:
+    build: .
+    container_name: music-weather-collector
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+      - ./data:/app/data   # <-- AJOUT : partage controlé
+    restart: unless-stopped
+    command: python src/main.py --monitor
+
+  jupyter:
+    image: jupyter/minimal-notebook:latest
+    container_name: jupyter-analytics
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work       # tes notebooks
+      - ./data:/home/jovyan/data            # accès à la base SQLite
+    environment:
+      - JUPYTER_TOKEN=admin
+    restart: unless-stopped
+
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: grafana-dashboard
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - GF_SECURITY_ADMIN_USER=admin
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin123
+  #   volumes:
+  #     - grafana_data:/var/lib/grafana
+
+# volumes:
+  # grafana_data:
