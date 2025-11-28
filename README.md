@@ -1,6 +1,6 @@
 # WeatherFM
 
-Un petit projet Python pour ingérer, enrichir et analyser des données météo et métadonnées musicales.
+Projet pour ingérer, enrichir et analyser des données météo et métadonnées musicales.
 
 - Ce projet WeatherFM permet :
 
