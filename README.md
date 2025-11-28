@@ -71,13 +71,11 @@ pytest -q
 - `notebooks/` : analyses exploratoires
 
 ## Points d'intégration / configuration
-- Les clés API et configurations sensibles sont fournies via variables d'environnement. Voir `test_api_keys.py` pour exemples d'utilisation et tests rapides.
+- Les clés API et configurations sensibles sont fournies via variables d'environnement. 
 - Les collectors/enrichers (ex. `src/lastfm_weather_collector.py`) appellent des APIs externes ; vérifiez les quotas et clés avant d'exécuter des jobs en production.
 
-## Flux de données (très bref)
+## Flux de données 
 1. Ingestion (scripts dans `src/ingestion/`) dépose des JSON dans `data/raw/`.
 2. ETL (`src/etl/etl_orchestrator.py`, `src/etl/etl_pipeline.py`) transforme et enrichit les données.
 3. Analyses et visualisations lisent les sorties transformées (ou utilisent les notebooks).
 
-## Besoin d'aide / contributions
-Ouvrez une issue ou proposez une PR. Si vous voulez des instructions plus détaillées (exemples d'env vars, recette de déploiement), dites-moi ce que vous préférez voir.
